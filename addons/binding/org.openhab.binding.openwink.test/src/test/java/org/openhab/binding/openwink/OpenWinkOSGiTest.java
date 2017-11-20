@@ -12,7 +12,7 @@ import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
-import org.openhab.binding.openwink.handler.openWinkHandler;
+import org.openhab.binding.openwink.handler.OpenWinkHandler;
 import org.eclipse.smarthome.core.thing.Bridge;
 import org.eclipse.smarthome.core.thing.ManagedThingProvider;
 import org.eclipse.smarthome.core.thing.ThingProvider;
@@ -25,11 +25,11 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
-* Tests cases for {@link openWinkHandler}.
+* Tests cases for {@link OpenWinkHandler}.
 *
 * @author Stephen Legge - Initial contribution
 */
-public class openWinkOSGiTest extends JavaOSGiTest {
+public class OpenWinkOSGiTest extends JavaOSGiTest {
 
     private static final ThingTypeUID BRIDGE_THING_TYPE_UID = new ThingTypeUID("openwink", "bridge");
 

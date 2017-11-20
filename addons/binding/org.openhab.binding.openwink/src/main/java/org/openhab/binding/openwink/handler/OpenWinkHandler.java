@@ -8,7 +8,7 @@
  */
 package org.openhab.binding.openwink.handler;
 
-import static org.openhab.binding.openwink.openWinkBindingConstants.*;
+import static org.openhab.binding.openwink.OpenWinkBindingConstants.*;
 
 import org.eclipse.jdt.annotation.NonNullByDefault;
 import org.eclipse.smarthome.core.thing.ChannelUID;
@@ -20,17 +20,17 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * The {@link openWinkHandler} is responsible for handling commands, which are
+ * The {@link OpenWinkHandler} is responsible for handling commands, which are
  * sent to one of the channels.
  *
  * @author Stephen Legge - Initial contribution
  */
  @NonNullByDefault
-public class openWinkHandler extends BaseThingHandler {
+public class OpenWinkHandler extends BaseThingHandler {
 
-    private final Logger logger = LoggerFactory.getLogger(openWinkHandler.class);
+    private final Logger logger = LoggerFactory.getLogger(OpenWinkHandler.class);
 
-    public openWinkHandler(Thing thing) {
+    public OpenWinkHandler(Thing thing) {
         super(thing);
     }
 

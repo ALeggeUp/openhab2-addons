@@ -14,7 +14,7 @@ import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.verify;
 import static org.mockito.MockitoAnnotations.initMocks;
 
-import org.openhab.binding.openwink.handler.openWinkHandler;
+import org.openhab.binding.openwink.handler.OpenWinkHandler;
 import org.eclipse.smarthome.core.thing.Thing;
 import org.eclipse.smarthome.core.thing.ThingStatus;
 import org.eclipse.smarthome.core.thing.ThingStatusInfo;
@@ -26,11 +26,11 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 
 /**
-* Tests cases for {@link openWinkHandler}. The tests provide mocks for supporting entities using Mockito.
+* Tests cases for {@link OpenWinkHandler}. The tests provide mocks for supporting entities using Mockito.
 *
 * @author Stephen Legge - Initial contribution
 */
-public class openWinkHandlerTest {
+public class OpenWinkHandlerTest {
 
     private ThingHandler handler;
 
@@ -43,7 +43,7 @@ public class openWinkHandlerTest {
     @Before
     public void setUp() {
         initMocks(this);
-        handler = new openWinkHandler(thing);
+        handler = new OpenWinkHandler(thing);
         handler.setCallback(callback);
     }
 

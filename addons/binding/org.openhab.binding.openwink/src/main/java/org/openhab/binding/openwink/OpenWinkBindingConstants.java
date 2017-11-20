@@ -12,13 +12,13 @@ import org.eclipse.jdt.annotation.NonNullByDefault;
 import org.eclipse.smarthome.core.thing.ThingTypeUID;
 
 /**
- * The {@link openWinkBindingConstants} class defines common constants, which are
+ * The {@link OpenWinkBindingConstants} class defines common constants, which are
  * used across the whole binding.
  *
  * @author Stephen Legge - Initial contribution
  */
  @NonNullByDefault
-public class openWinkBindingConstants {
+public class OpenWinkBindingConstants {
 
     private static final String BINDING_ID = "openwink";
 

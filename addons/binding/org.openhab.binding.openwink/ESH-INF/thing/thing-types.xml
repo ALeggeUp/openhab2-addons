@@ -6,8 +6,8 @@
 
 	<!-- Sample Thing Type -->
 	<thing-type id="sample">
-		<label>openWink Binding Thing</label>
-		<description>Sample thing for openWink Binding</description>
+		<label>OpenWink Binding Thing</label>
+		<description>Sample thing for OpenWink Binding</description>
 
 		<channels>
 			<channel id="channel1" typeId="sample-channel"/>
@@ -17,8 +17,8 @@
 	<!-- Sample Channel Type -->
 	<channel-type id="sample-channel">
 		<item-type>openwinkItem</item-type>
-		<label>openWink Binding Channel</label>
-		<description>Sample channel for openWink Binding</description>
+		<label>OpenWink Binding Channel</label>
+		<description>Sample channel for OpenWink Binding</description>
 	</channel-type>
 
 </thing:thing-descriptions>
