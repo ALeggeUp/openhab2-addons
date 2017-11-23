@@ -6,9 +6,8 @@
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  */
-package org.openhab.binding.openwink.handler;
 
-import static org.openhab.binding.openwink.OpenWinkBindingConstants.*;
+package org.openhab.binding.openwink.handler;
 
 import org.eclipse.jdt.annotation.NonNullByDefault;
 import org.eclipse.smarthome.core.thing.ChannelUID;
@@ -16,27 +15,30 @@ import org.eclipse.smarthome.core.thing.Thing;
 import org.eclipse.smarthome.core.thing.ThingStatus;
 import org.eclipse.smarthome.core.thing.binding.BaseThingHandler;
 import org.eclipse.smarthome.core.types.Command;
+import org.openhab.binding.openwink.OpenWinkBindingConstants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * The {@link OpenWinkHandler} is responsible for handling commands, which are
+ * The {@link OpenWinkDeviceHandler} is responsible for handling commands, which are
  * sent to one of the channels.
  *
  * @author Stephen Legge - Initial contribution
  */
- @NonNullByDefault
-public class OpenWinkHandler extends BaseThingHandler {
+@NonNullByDefault
+public class OpenWinkDeviceHandler extends BaseThingHandler {
 
-    private final Logger logger = LoggerFactory.getLogger(OpenWinkHandler.class);
+    private final Logger logger = LoggerFactory.getLogger(OpenWinkDeviceHandler.class);
 
-    public OpenWinkHandler(Thing thing) {
+    public OpenWinkDeviceHandler(final Thing thing) {
         super(thing);
+        logger.info("OpenWinkDeviceHandler");
     }
 
     @Override
-    public void handleCommand(ChannelUID channelUID, Command command) {
-        if (channelUID.getId().equals(CHANNEL_1)) {
+    public void handleCommand(final ChannelUID channelUID, final Command command) {
+        logger.info("OpenWinkDeviceHandler::handleCommand");
+        if (channelUID.getId().equals(OpenWinkBindingConstants.CHANNEL_CONNECT)) {
             // TODO: handle command
 
             // Note: if communication with thing fails for some reason,

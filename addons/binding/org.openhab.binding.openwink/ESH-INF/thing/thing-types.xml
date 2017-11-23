@@ -4,21 +4,65 @@
 						  xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
 						  xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
 
-	<!-- Sample Thing Type -->
-	<thing-type id="sample">
-		<label>OpenWink Binding Thing</label>
-		<description>Sample thing for OpenWink Binding</description>
+    <bridge-type id="hub">
+        <label>OpenWink Hub</label>
+        <description>OpenWink Binding</description>
+<!--
+        <channels>
+            <channel id="connection" typeId="connect"/>
+        </channels>
+-->
+        <config-description>
 
-		<channels>
-			<channel id="channel1" typeId="sample-channel"/>
-		</channels>
-	</thing-type>
+            <parameter name="connectionType" type="text" required="true">
+                <label>Connection Type</label>
+                <default>local</default>
+                <options>
+                  <option value="local">local</option>
+                  <!--  <option value="cloud">cloud</option> -->
+                </options>
+                <description>The type of connection can be either local or cloud.</description>
+            </parameter>
 
-	<!-- Sample Channel Type -->
-	<channel-type id="sample-channel">
-		<item-type>openwinkItem</item-type>
-		<label>OpenWink Binding Channel</label>
-		<description>Sample channel for OpenWink Binding</description>
-	</channel-type>
+            <parameter name="ipAddress" type="text" required="true">
+                <label>Network Address</label>
+                <description>The IP or host name of the wink hub.</description>
+                <context>network-address</context>
+            </parameter>
+
+            <parameter name="port" type="integer" required="true" min="1" max="65335">
+                <label>AAU Service secured transport port</label>
+                <description>Port for the AAU service on the local hub.  This is ignored if the
+                             connection type is 'cloud'.</description>
+                <default>8888</default>
+            </parameter>
+
+            <parameter name="authToken" type="text" required="true">
+                <label>Authorization Token</label>
+                <description>Token stored in /database/local_control_data/config.json</description>
+            </parameter>
+
+        </config-description>
+
+    </bridge-type>
+
+    <thing-type id="hub-device">
+        <supported-bridge-type-refs>
+            <bridge-type-ref id="openwink"/>
+        </supported-bridge-type-refs>
+        <label>OpenWink Device</label>
+        <description>This is a device controlled or monitored by the Wink Hub.</description>
+
+        <channels>
+            <channel typeId="connection" id="deviceConnected"/>
+        </channels>
+    </thing-type>
+
+    <channel-type id="connection" advanced="true">
+        <item-type>Switch</item-type>
+        <label>...</label>
+        <description>...</description>
+        <state readOnly="true"/>
+    </channel-type>
 
 </thing:thing-descriptions>

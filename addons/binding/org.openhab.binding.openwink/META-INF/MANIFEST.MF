@@ -11,16 +11,26 @@ Export-Package:
  org.openhab.binding.openwink,
  org.openhab.binding.openwink.handler
 Import-Package: 
- org.openhab.binding.openwink,
- org.openhab.binding.openwink.handler,
+ com.google.gson;version="2.7.0",
+ com.google.gson.annotations;version="2.7.0",
+ org.apache.commons.net.util;version="3.2.0",
  org.eclipse.jdt.annotation;resolution:=optional,
+ org.eclipse.jetty.client;version="9.3.15",
+ org.eclipse.jetty.client.api;version="9.3.15",
+ org.eclipse.jetty.http;version="9.4.5",
+ org.eclipse.jetty.util.component;version="9.4.5",
+ org.eclipse.jetty.util.ssl;version="9.4.5",
  org.eclipse.smarthome.config.core,
+ org.eclipse.smarthome.config.discovery,
  org.eclipse.smarthome.core.library.types,
  org.eclipse.smarthome.core.thing,
  org.eclipse.smarthome.core.thing.binding,
  org.eclipse.smarthome.core.thing.binding.builder,
  org.eclipse.smarthome.core.thing.type,
  org.eclipse.smarthome.core.types,
+ org.openhab.binding.openwink,
+ org.openhab.binding.openwink.handler,
+ org.osgi.framework,
  org.osgi.service.component.annotations;resolution:=optional,
  org.slf4j
 Service-Component: OSGI-INF/*.xml

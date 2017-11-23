@@ -12,7 +12,7 @@ import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
-import org.openhab.binding.openwink.handler.OpenWinkHandler;
+import org.openhab.binding.openwink.handler.OpenWinkDeviceHandler;
 import org.eclipse.smarthome.core.thing.Bridge;
 import org.eclipse.smarthome.core.thing.ManagedThingProvider;
 import org.eclipse.smarthome.core.thing.ThingProvider;
@@ -25,7 +25,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
-* Tests cases for {@link OpenWinkHandler}.
+* Tests cases for {@link OpenWinkDeviceHandler}.
 *
 * @author Stephen Legge - Initial contribution
 */
