@@ -9,6 +9,10 @@
 
 package org.openhab.binding.openwink.internal.model;
 
+/**
+ * @author [ A Legge Up ] - Initial contribution
+ * @author Stephen Legge <stephen@aleggeup.com>
+ */
 public class HubDevicesPagination {
 
     private int count;
