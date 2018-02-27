@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2010-2017 by the respective copyright holders.
+ * Copyright (c) 2010-2018 by the respective copyright holders.
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
@@ -83,7 +83,7 @@ public class OpenWinkDeviceDiscoveryService extends AbstractDiscoveryService {
     protected void activate(final Map<String, Object> configProperties) {
         logger.info("StartScan called from activate");
         for (final Entry<String, Object> entry : configProperties.entrySet()) {
-            logger.info(entry.getKey() + ": " + entry.getValue().toString());
+            logger.info("{}: {}", entry.getKey(), entry.getValue().toString());
         }
         startScan();
     }
@@ -108,7 +108,7 @@ public class OpenWinkDeviceDiscoveryService extends AbstractDiscoveryService {
         try {
             response = request.send();
             final String content = response.getContentAsString();
-            logger.info("Response " + content);
+            logger.info("Response {}", content);
 
             Gson gson = new GsonBuilder().create();
             HubDevices devices = gson.fromJson(content, HubDevices.class);
@@ -124,7 +124,7 @@ public class OpenWinkDeviceDiscoveryService extends AbstractDiscoveryService {
                 thingDiscovered(result);
             }
 
-            logger.info("parsed devices count: " + devices.getData().length);
+            logger.info("parsed devices count: {}", devices.getData().length);
         } catch (final InterruptedException | TimeoutException | ExecutionException e) {
             logger.error("Unable to complete request.", e);
         }

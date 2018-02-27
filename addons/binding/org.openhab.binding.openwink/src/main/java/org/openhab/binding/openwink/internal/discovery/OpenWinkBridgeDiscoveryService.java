@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2010-2017 by the respective copyright holders.
+ * Copyright (c) 2010-2018 by the respective copyright holders.
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
@@ -67,7 +67,7 @@ public class OpenWinkBridgeDiscoveryService extends AbstractDiscoveryService imp
     protected void activate(final Map<String, Object> configProperties) {
         logger.info("StartScan called from activate");
         for (final Entry<String, Object> entry : configProperties.entrySet()) {
-            logger.info(entry.getKey() + ": " + entry.getValue().toString());
+            logger.info("{}: {}", entry.getKey(), entry.getValue().toString());
         }
         startScan();
     }
