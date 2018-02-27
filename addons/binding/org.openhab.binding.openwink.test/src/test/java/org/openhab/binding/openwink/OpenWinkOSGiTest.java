@@ -9,7 +9,7 @@
 package org.openhab.binding.openwink;
 
 import static org.hamcrest.CoreMatchers.*;
-import static org.hamcrest.core.Is.is;
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 import org.openhab.binding.openwink.handler.OpenWinkDeviceHandler;
