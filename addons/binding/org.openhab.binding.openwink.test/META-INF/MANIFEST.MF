@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: openWink Binding Tests
+Bundle-Name: OpenWink Binding Tests
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-SymbolicName: org.openhab.binding.openwink.test;singleton:=true
 Bundle-Vendor: openHAB
